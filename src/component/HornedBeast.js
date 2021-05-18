@@ -24,7 +24,7 @@ class HornedBeast extends React.Component {
     render() {
         return (
             
-            // <h2>{this.props.title}</h2> <img onClick={this.increaseNumberofclicks} src={this.props.imageUrl} alt={this.props.title} title={this.props.title} /> <p>this number {this.state.numberOfpets}</p> <p>{this.props.descreption}</p>
+         
             <div> 
 
                 <Card    style={{ width: '18rem' }}>

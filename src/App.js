@@ -17,15 +17,14 @@ class App extends React.Component {
       Data:Data,
     }
   }
-  // const [show, setShow] = useState(false);
-  // const handleClose = () => setShow(false);
+
   handleShow = () => {
     this.setState({
       show: true,
     })
-    // console.log('asdfasz');
+  
   }
-  // const handleShow = () => setShow(true);
+
   handleClose = () => {
     this.setState({
       show: false,
@@ -59,7 +58,7 @@ class App extends React.Component {
         <SelectedBeast
           handleClose={this.handleClose}
           show={this.state.show}
-          // Data={Data}
+        
           selectedAnimal={this.state.selectedAnimal}
 
         />

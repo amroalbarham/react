@@ -1,6 +1,6 @@
 import React from 'react';
 import HornedBeast from './HornedBeast';
-// import Data from './data.json'
+
 import { CardColumns } from 'react-bootstrap'
 
 
@@ -19,7 +19,7 @@ class Main extends React.Component {
                                 imageUrl={item.image_url}
                                 descreption={item.description}
                                 key={index}
-                                // handleShow={this.props.handleShow}
+                        
                                 displayAniml={this.props.displayAniml}
                                
                                 
