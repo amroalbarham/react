@@ -3,23 +3,68 @@ import Header from './component/header';
 import Footer from './component/footer';
 import Main from './component/main';
 import Data from './component/data.json';
-
-
-
+import SelectedBeast from './component/SelectedBeast'
 
 
 class App extends React.Component {
 
-  
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      show: false,
+      selectedAnimal: {},
+      Data:Data,
+    }
+  }
+  // const [show, setShow] = useState(false);
+  // const handleClose = () => setShow(false);
+  handleShow = () => {
+    this.setState({
+      show: true,
+    })
+    // console.log('asdfasz');
+  }
+  // const handleShow = () => setShow(true);
+  handleClose = () => {
+    this.setState({
+      show: false,
+    })
+  }
+  displayAniml = (title) => {
+    const selectedAnimal = Data.find(animle => {
+      if (animle.title === title) {
+        return animle;
+
+      }
+
+    })
+    this.setState({
+      show: true,
+      selectedAnimal: selectedAnimal,
+
+    })
+  }
+
+
   render() {
     return (
       <div>
-      <Header/>
-      <Main
-      Data={Data}
-      />
-      <Footer/>
-       </div>
+        <Header />
+        <Main
+          Data={this.state.Data}
+          handleShow={this.handleShow}
+          displayAniml={this.displayAniml}
+        />
+        <SelectedBeast
+          handleClose={this.handleClose}
+          show={this.state.show}
+          // Data={Data}
+          selectedAnimal={this.state.selectedAnimal}
+
+        />
+        <Footer />
+      </div>
     )
 
 
