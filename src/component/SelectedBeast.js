@@ -31,8 +31,8 @@ class SelectedBeast extends React.Component {
                     <Modal.Header closeButton>
                         <Modal.Title>Modal heading</Modal.Title>
                     </Modal.Header>
-                    <Modal.Body> asfdsaf </Modal.Body>
-                    <Card.Img style={{width:'250px'}} variant="top" src={this.props.selectedAnimal.image_url} />
+                    <Modal.Body> {this.props.selectedAnimal.description}  </Modal.Body>
+                    <Card.Img style={{width:'400px'}} variant="top" src={this.props.selectedAnimal.image_url} />
                     <Modal.Footer>
                         <Button variant="secondary" onClick={this.props.handleClose}>
                             Close

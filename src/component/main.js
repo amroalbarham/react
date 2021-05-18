@@ -19,7 +19,7 @@ class Main extends React.Component {
                                 imageUrl={item.image_url}
                                 descreption={item.description}
                                 key={index}
-                                handleShow={this.props.handleShow}
+                                // handleShow={this.props.handleShow}
                                 displayAniml={this.props.displayAniml}
                                
                                 
