@@ -12,13 +12,19 @@ class Main extends React.Component {
             <CardColumns>
                 <div className='new'>
 
-                    {this.props.Data.map(item => {
+                    {this.props.Data.map((item,index) => {
                         return (
                             <HornedBeast
                                 title={item.title}
                                 imageUrl={item.image_url}
                                 descreption={item.description}
-                            />
+                                key={index}
+                                handleShow={this.props.handleShow}
+                                displayAniml={this.props.displayAniml}
+                               
+                                
+                                />
+
                         )
                     })
                     }
