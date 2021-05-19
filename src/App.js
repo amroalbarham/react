@@ -13,7 +13,8 @@ class App extends React.Component {
     this.state = {
       show: false,
       selectedAnimal: {},
-      Data: Data,
+      listData: Data,
+
     }
   }
 
@@ -22,6 +23,18 @@ class App extends React.Component {
       show: true,
     })
 
+  }
+  filterPc = (value) => {
+    let filterArr = Data.filter(elemnt => {
+      if (elemnt.horns == value) {
+        return elemnt
+      } else if (value == 'all') {
+        return elemnt
+      }
+    })
+    this.setState({
+      listData: filterArr
+    })
   }
 
   handleClose = () => {
@@ -49,9 +62,10 @@ class App extends React.Component {
       <div>
         <Header />
         <Main
-          Data={this.state.Data}
+          newArr={this.state.listData}
           handleShow={this.handleShow}
           displayAniml={this.displayAniml}
+          filterPc={this.filterPc}
         />
         <SelectedBeast
           handleClose={this.handleClose}
