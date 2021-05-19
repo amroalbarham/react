@@ -12,28 +12,27 @@ class Main extends React.Component {
             <CardColumns>
                 <div className='new'>
 
-                    {this.props.Data.map((item,index) => {
+                    {this.props.Data.map((item, index) => {
                         return (
                             <HornedBeast
                                 title={item.title}
                                 imageUrl={item.image_url}
                                 descreption={item.description}
                                 key={index}
-                        
                                 displayAniml={this.props.displayAniml}
-                               
-                                
-                                />
+                            />
 
                         )
                     })
                     }
-
-
-
                 </div>
             </CardColumns>
         )
     }
 }
 export default Main;
+
+
+
+
+

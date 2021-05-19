@@ -8,13 +8,12 @@ import SelectedBeast from './component/SelectedBeast'
 
 class App extends React.Component {
 
-
   constructor(props) {
     super(props);
     this.state = {
       show: false,
       selectedAnimal: {},
-      Data:Data,
+      Data: Data,
     }
   }
 
@@ -22,7 +21,7 @@ class App extends React.Component {
     this.setState({
       show: true,
     })
-  
+
   }
 
   handleClose = () => {
@@ -36,7 +35,6 @@ class App extends React.Component {
         return animle;
 
       }
-
     })
     this.setState({
       show: true,
@@ -58,15 +56,16 @@ class App extends React.Component {
         <SelectedBeast
           handleClose={this.handleClose}
           show={this.state.show}
-        
           selectedAnimal={this.state.selectedAnimal}
-
         />
         <Footer />
       </div>
     )
-
-
   }
 }
+
+
+
+
 export default App;
+
